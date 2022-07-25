@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE configuration PUBLIC './/mybatis.org//DTD config 3.0//EN'
+	'http://mybatis.org/dtd/mybatis-3-config.dtd'>
+<!-- root tag -->
+<configuration> 
+	<!-- resource의 경로는 class path에서 시작한다. -->
+	<properties resource='config/jdbc.properties'>
+		<property name='driver' value='oracle.jdbc.driver.OracleDriver'/> 
+	</properties>
+	<typeAliases>
+		<typeAlias type='ch02.domain.User' alias='user'/>
+	</typeAliases>
+	
+	<environments default='development'>
+		<environment id ='development'>
+			<transactionManager type='JDBC'/>
+			<!-- POOLED 방식에서는 connection을 여러개 준비한다. -->
+			<dataSource type='POOLED'>
+				<!-- ${} : EL(Expression Language): 값을 표현한다. -->
+				<property name='driver' value='${driver}'/><!-- EL(Expresstion Language) --> 
+				<property name='url' value='${url}'/>
+				<property name='username' value='${username}'/>
+				<property name='password' value='${password}'/>
+			</dataSource>			
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource='ch02/ex01/sqlMap.xml'/>
+		<mapper resource='ch02/ex02/sqlmap.xml'/>
+		<mapper resource='ch02/ex03/sqlmap.xml'/>
+	</mappers>	
+</configuration>

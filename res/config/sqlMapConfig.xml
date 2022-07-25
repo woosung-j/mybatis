@@ -9,6 +9,7 @@
 	</properties>
 	<typeAliases>
 		<typeAlias type='ch02.domain.User' alias='user'/>
+		<package name='ch03.domain' />
 	</typeAliases>
 	
 	<environments default='development'>
@@ -17,7 +18,7 @@
 			<!-- POOLED 방식에서는 connection을 여러개 준비한다. -->
 			<dataSource type='POOLED'>
 				<!-- ${} : EL(Expression Language): 값을 표현한다. -->
-				<property name='driver' value='${driver}'/><!-- EL(Expresstion Language) --> 
+				<property name='driver' value='${driver}'/>
 				<property name='url' value='${url}'/>
 				<property name='username' value='${username}'/>
 				<property name='password' value='${password}'/>
@@ -26,9 +27,10 @@
 	</environments>
 	<mappers>
 		<mapper resource='ch02/ex01/sqlMap.xml'/>
-		<mapper resource='ch02/ex02/sqlmap.xml'/>
-		<mapper resource='ch02/ex03/sqlmap.xml'/>
-		<mapper resource='ch02/ex04/sqlmap.xml'/>
-		<mapper resource='ch02/ex05/sqlmap.xml'/>
+		<mapper resource='ch02/ex02/sqlMap.xml'/>
+		<mapper resource='ch02/ex03/sqlMap.xml'/>
+		<mapper resource='ch02/ex04/sqlMap.xml'/>
+		<mapper resource='ch02/ex05/sqlMap.xml'/>
+		<mapper resource='ch03/ex01/sqlMap.xml'/>
 	</mappers>	
 </configuration>

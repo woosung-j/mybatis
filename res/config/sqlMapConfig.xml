@@ -36,5 +36,6 @@
 		<mapper resource='ch04/ex01/sqlMap.xml'/>
 		<mapper resource='ch04/ex02/sqlMap.xml'/>
 		<mapper resource='ch05/ex01/sqlMap.xml'/>
+		<mapper resource='ch05/ex02/sqlMap.xml'/>
 	</mappers>	
 </configuration>

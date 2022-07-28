@@ -60,5 +60,6 @@
 	 	<mapper class='ch07.ex01.Map'/>
 	 	<mapper class='ch07.ex02.Map'/>
 	 	<mapper class='ch07.ex03.Map'/>
+	 	<mapper class='ch07.ex04.Map'/>
 	</mappers>	
 </configuration>
